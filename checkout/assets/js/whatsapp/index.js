@@ -22,14 +22,16 @@ $(document).on('click','.send_contact', function(){
         input_city      = $("#city").val(),
         input_program   = $("#program :selected").text()
         input_note      = $("#note").val();
-
+        input_unique    = $("#ttl-byr").text();
     /* Final Whatsapp URL */
     var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
         '*Nama*         : ' + input_name + '%0A' +
         '*Program*      : ' + input_program + '%0A' +
         '*Kota*         : ' + input_city + '%0A' +
         '*Profesi*      : ' + input_work + '%0A' +
-        '*Catatan*      : ' + input_note + '%0A';
+        '*Catatan*      : ' + input_note + '%0A' + '%0A' +
+        '*Total*        : ' + input_unique + '%0A' ;
+        
 
     /* Whatsapp Window Open */
     window.open(blanter_whatsapp,'_blank');

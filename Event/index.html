@@ -1616,8 +1616,14 @@
 										Love life's sweetest reward Let it flow it floats back to
 										you. Said Californ'y is the place you ought
 									</p>
-									<div data-date="2016/05/30" id="clock-1" class="clock"></div>
+									<div data-date1="2023/06/01" id="clock-1" class="clock">
+										<p>00 <span>Days</span></p>
+										<p>00 <span>Hours</span></p>
+										<p>00 <span>Mins</span></p>
+										<p>00 <span>Secs</span></p>
+									</div>
 								</div>
+								
 							</div>
 							<div class="item">
 								<div class="timer-box">
@@ -1627,7 +1633,12 @@
 										Love life's sweetest reward Let it flow it floats back to
 										you. Said Californ'y is the place you ought
 									</p>
-									<div data-date="2016/06/01" id="clock-2" class="clock"></div>
+									<div data-date="2026/06/01" id="clock-2" class="clock">
+										<p>00 <span>Days</span></p>
+										<p>00 <span>Hours</span></p>
+										<p>00 <span>Mins</span></p>
+										<p>00 <span>Secs</span></p>
+									</div>
 								</div>
 							</div>
 							<div class="item">
@@ -1638,10 +1649,89 @@
 										Love life's sweetest reward Let it flow it floats back to
 										you. Said Californ'y is the place you ought
 									</p>
-									<div data-date="2016/07/05" id="clock-3" class="clock"></div>
+									<div data-date="2024/06/01" id="clock-3" class="clock">
+										<p>00 <span>Days</span></p>
+										<p>00 <span>Hours</span></p>
+										<p>00 <span>Mins</span></p>
+										<p>00 <span>Secs</span></p>
+									</div>
 								</div>
 							</div>
 						</div>
+						<script>
+									// Ambil elemen dengan id 'clock-2'
+									const countdown = document.getElementById('clock-1');
+									const countdown2 = document.getElementById('clock-2');
+									const countdown3 = document.getElementById('clock-3');
+
+									// Atur tanggal akhir dari penghitungan mundur (dalam waktu lokal)
+									const countDate = new Date(countdown.getAttribute('data-date1')).getTime();
+									const countDate2 = new Date(countdown.getAttribute('data-date2')).getTime();
+									const countDate3 = new Date(countdown.getAttribute('data-date3')).getTime();
+
+									// Fungsi untuk memperbarui hitungan mundur
+									function updateCountdown() {
+										// Dapatkan waktu saat ini
+										const now = new Date().getTime();
+
+										// Hitung selisih antara waktu saat ini dan tanggal akhir
+										const distance = countDate - now;
+										const distance2 = countDate2 - now;
+										const distance3 = countDate3 - now;
+
+										// Hitung jumlah hari, jam, menit, dan detik yang tersisa
+										const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+										const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+										const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+										const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+										const days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+										const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+										const minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+										const seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+										const days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+										const hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+										const minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+										const seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+
+
+
+										// Perbarui teks pada elemen countdown
+										countdown.innerHTML = `<p>${days} <span>Days</span></p>
+                          									   <p>${hours} <span>Hours</span></p>
+                          									   <p>${minutes} <span>Mins</span></p>
+                          									   <p>${seconds} <span>Secs</span></p>`;
+
+										countdown2.innerHTML = `<p>${days} <span>Days</span></p>
+                          									   <p>${hours} <span>Hours</span></p>
+                          									   <p>${minutes} <span>Mins</span></p>
+                          									   <p>${seconds} <span>Secs</span></p>`;
+
+										countdown3.innerHTML = `<p>${days} <span>Days</span></p>
+                          									   <p>${hours} <span>Hours</span></p>
+                          									   <p>${minutes} <span>Mins</span></p>
+                          									   <p>${seconds} <span>Secs</span></p>`;
+
+										// Jika hitungan mundur selesai, tampilkan pesan
+										if (distance < 0) {
+											clearInterval(countdownInterval);
+											countdown.innerHTML = "Countdown finished!";
+										}
+										if (distance2 < 0) {
+											clearInterval(countdownInterval2);
+											countdown2.innerHTML = "Countdown finished!";
+										}
+										if (distance3 < 0) {
+											clearInterval(countdownInterval3);
+											countdown3.innerHTML = "Countdown finished!";
+										}
+									}
+
+									// Panggil fungsi updateCountdown() setiap 1 detik
+									const countdownInterval = setInterval(updateCountdown, 1000);
+
+								</script>
 						<!-- Controls -->
 						<a class="left carousel-control" href="#timer-slider" role="button" data-slide="prev">
 							<i class="fa fa-angle-left" aria-hidden="true"></i>

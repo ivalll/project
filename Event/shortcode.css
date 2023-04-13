@@ -707,20 +707,21 @@
   border: 1px solid #ddd;
   border-top: none;
 }
-
 /* -- Accrodion */
-.schedule-block .card-group .card {
+.schedule-block .panel-group .panel {
   border-radius: 0;
   margin-bottom: 15px;
   box-shadow: none;
   border: none;
   position: relative;
 }
-.schedule-block .card-group .card:last-of-type {
+
+.schedule-block .panel-group .panel:last-of-type {
   margin-bottom: 0;
 }
-.schedule-block .card-group .card::before,
-.schedule-block .card.card-default .card-collapse::before {
+
+.schedule-block .panel-group .panel::before,
+.schedule-block .panel.panel-default .panel-collapse::before {
   position: absolute;
   content: "";
   left: 108px;
@@ -730,29 +731,35 @@
   bottom: -25px;
   width: 1px;
 }
-.schedule-block .card.card-default .card-collapse::before {
+
+.schedule-block .panel.panel-default .panel-collapse::before {
   z-index: 1;
   bottom: -15px;
 }
-.schedule-block .card-group .card:last-of-type::before {
+
+.schedule-block .panel-group .panel:last-of-type::before {
   height: 0;
   width: 0;
 }
-.schedule-block .card-group .card::before {
+
+.schedule-block .panel-group .panel::before {
   background-color: #ddd;
 }
-.schedule-block .card-group {
+
+.schedule-block .panel-group {
   margin-bottom: 0;
   padding: 50px 50px 50px 30px;
   display: inline-block;
 }
-.schedule-block .card-default .card-heading {
+
+.schedule-block .panel-default .panel-heading {
   border-radius: 0;
   background-color: transparent;
   padding: 0 0 18px;
   position: relative;
 }
-.schedule-block .card.card-default .card-heading span {
+
+.schedule-block .panel.panel-default .panel-heading span {
   font-weight: 500;
   color: #cbcbcb;
   line-height: 28px;
@@ -760,23 +767,26 @@
   left: 0;
   top: 0;
 }
-.schedule-block .card.card-default .card-collapse,
-.schedule-block .card.card-default .card-heading {
+
+.schedule-block .panel.panel-default .panel-collapse,
+.schedule-block .panel.panel-default .panel-heading {
   padding-left: 150px;
 }
-.schedule-block .card-default .card-heading .card-title a {
+
+.schedule-block .panel-default .panel-heading .panel-title a {
   text-decoration: none;
   font-size: 18px;
   color: #222;
   letter-spacing: 0.18px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   display: inline-block;
   line-height: 28px;
   position: relative;
 }
-.schedule-block .card-group .card-heading a:before {
-  content: "\f107";
+
+.schedule-block .panel-group .panel-heading a:before {
+  content: '\f107';
   font-family: FontAwesome;
   font-size: 15px;
   font-weight: 400;
@@ -790,8 +800,9 @@
   line-height: 24px;
   border: 1px solid #feca16;
 }
-.schedule-block .card-group .card-heading a.collapsed:before {
-  content: "\f106";
+
+.schedule-block .panel-group .panel-heading a.collapsed:before {
+  content: '\f106';
   font-family: FontAwesome;
   left: -54px;
   font-size: 15px;
@@ -801,8 +812,9 @@
   color: #b4b4b4;
   border-color: #ddd;
 }
-.schedule-block .card-group .card-heading a.collapsed:after {
-  content: "\f107";
+
+.schedule-block .panel-group .panel-heading a.collapsed:after {
+  content: '\f107';
   font-family: FontAwesome;
   font-size: 15px;
   color: #fff;
@@ -811,43 +823,51 @@
   top: 0;
   border-color: #ddd;
 }
-.schedule-block .card-default .card-body {
+
+.schedule-block .panel-default .panel-body {
   padding: 0;
 }
-.schedule-block .card-default .card-heading + .card-collapse > .card-body {
+
+.schedule-block .panel-default .panel-heading+.panel-collapse>.panel-body {
   border: none;
   margin-bottom: 25px;
   display: inline-block;
 }
-.schedule-block .card-default .card-body p {
+
+.schedule-block .panel-default .panel-body p {
   color: #777;
   font-size: 16px;
   letter-spacing: 0.16px;
   line-height: 30px;
 }
-.schedule-block .card-default .card-body .author-box {
+
+.schedule-block .panel-default .panel-body .author-box {
   position: relative;
   margin-top: 41px;
 }
-.schedule-block .card-default .card-body .author-box img {
+
+.schedule-block .panel-default .panel-body .author-box img {
   border-radius: 100%;
   position: absolute;
   left: 0;
   top: 12px;
 }
-.schedule-block .card-default .card-body .author-content {
+
+.schedule-block .panel-default .panel-body .author-content {
   margin-left: 98px;
 }
-.schedule-block .card-default .card-body .author-content h3 {
+
+.schedule-block .panel-default .panel-body .author-content h3 {
   color: #222;
   font-size: 15px;
   letter-spacing: 0.15px;
   display: inline-block;
   text-transform: uppercase;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
 }
-.schedule-block .card-default .card-body .author-content span {
+
+.schedule-block .panel-default .panel-body .author-content span {
   width: 100%;
   display: inline-block;
   margin-top: 12px;
@@ -855,7 +875,8 @@
   font-size: 12px;
   font-weight: 400;
 }
-.schedule-block .card-default .card-body .author-content a {
+
+.schedule-block .panel-default .panel-body .author-content a {
   text-decoration: none;
   background-color: #bfbfbf;
   padding: 4px 24px;
@@ -871,18 +892,22 @@
   -o-transition: all 1s ease 0s;
   line-height: 28px;
 }
-.schedule-block .card-default .card-body .author-content a:hover {
+
+.schedule-block .panel-default .panel-body .author-content a:hover {
   background-color: #feca16;
   color: #222;
 }
-.schedule-block .card-default .card-body .author-content a:last-of-type {
+
+.schedule-block .panel-default .panel-body .author-content a:last-of-type {
   margin-right: 0;
 }
-.schedule-block .card-default .card-body .author-content .btn-event {
+
+.schedule-block .panel-default .panel-body .author-content .btn-event {
   background-color: #feca16;
   padding: 4px 25px;
 }
-.schedule-block .card-default .card-body .author-content .btn-event:hover {
+
+.schedule-block .panel-default .panel-body .author-content .btn-event:hover {
   background-color: #bfbfbf;
   color: #fff;
 }

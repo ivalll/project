@@ -1610,13 +1610,13 @@
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 								<div class="timer-box">
-									<h3>Hurrp up!!</h3>
+									<h3>Hurry up!!</h3>
 									<p>
 										Love exciting and new. Come aboard were expecting you.
 										Love life's sweetest reward Let it flow it floats back to
 										you. Said Californ'y is the place you ought
 									</p>
-									<div data-date1="2023/06/01" id="clock-1" class="clock">
+									<div data-date="2023/06/01" id="clock-1" class="clock">
 										<p>00 <span>Days</span></p>
 										<p>00 <span>Hours</span></p>
 										<p>00 <span>Mins</span></p>
@@ -1627,13 +1627,13 @@
 							</div>
 							<div class="item">
 								<div class="timer-box">
-									<h3>Hurrp up 2!!</h3>
+									<h3>Hurry up 2!!</h3>
 									<p>
 										Love exciting and new. Come aboard were expecting you.
 										Love life's sweetest reward Let it flow it floats back to
 										you. Said Californ'y is the place you ought
 									</p>
-									<div data-date="2026/06/01" id="clock-2" class="clock">
+									<div data-date="2025/06/01" id="clock-2" class="clock">
 										<p>00 <span>Days</span></p>
 										<p>00 <span>Hours</span></p>
 										<p>00 <span>Mins</span></p>
@@ -1643,7 +1643,7 @@
 							</div>
 							<div class="item">
 								<div class="timer-box">
-									<h3>Hurrp up 3!!</h3>
+									<h3>Hurry up 3!!</h3>
 									<p>
 										Love exciting and new. Come aboard were expecting you.
 										Love life's sweetest reward Let it flow it floats back to
@@ -1665,14 +1665,15 @@
 									const countdown3 = document.getElementById('clock-3');
 
 									// Atur tanggal akhir dari penghitungan mundur (dalam waktu lokal)
-									const countDate = new Date(countdown.getAttribute('data-date1')).getTime();
-									const countDate2 = new Date(countdown.getAttribute('data-date2')).getTime();
-									const countDate3 = new Date(countdown.getAttribute('data-date3')).getTime();
+									const countDate = new Date(countdown.getAttribute('data-date')).getTime();
+									const countDate2 = new Date(countdown2.getAttribute('data-date')).getTime();
+									const countDate3 = new Date(countdown3.getAttribute('data-date')).getTime();
 
 									// Fungsi untuk memperbarui hitungan mundur
 									function updateCountdown() {
 										// Dapatkan waktu saat ini
 										const now = new Date().getTime();
+										
 
 										// Hitung selisih antara waktu saat ini dan tanggal akhir
 										const distance = countDate - now;
@@ -1703,15 +1704,15 @@
                           									   <p>${minutes} <span>Mins</span></p>
                           									   <p>${seconds} <span>Secs</span></p>`;
 
-										countdown2.innerHTML = `<p>${days} <span>Days</span></p>
-                          									   <p>${hours} <span>Hours</span></p>
-                          									   <p>${minutes} <span>Mins</span></p>
-                          									   <p>${seconds} <span>Secs</span></p>`;
+										countdown2.innerHTML = `<p>${days2} <span>Days</span></p>
+                          									   <p>${hours2} <span>Hours</span></p>
+                          									   <p>${minutes2} <span>Mins</span></p>
+                          									   <p>${seconds2} <span>Secs</span></p>`;
 
-										countdown3.innerHTML = `<p>${days} <span>Days</span></p>
-                          									   <p>${hours} <span>Hours</span></p>
-                          									   <p>${minutes} <span>Mins</span></p>
-                          									   <p>${seconds} <span>Secs</span></p>`;
+										countdown3.innerHTML = `<p>${days3} <span>Days</span></p>
+                          									   <p>${hours3} <span>Hours</span></p>
+                          									   <p>${minutes3} <span>Mins</span></p>
+                          									   <p>${seconds3} <span>Secs</span></p>`;
 
 										// Jika hitungan mundur selesai, tampilkan pesan
 										if (distance < 0) {

@@ -1458,20 +1458,64 @@ a {
   height: 700px;
   overflow: hidden;
   margin-bottom: 0px;
+  position: relative;
+}
+#team-carousel {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+#team-carousel li {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+#team-carousel li.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 @media (max-width: 479px) {
   .carausel-team {
     height: 1000px;
     overflow: hidden;
     margin-bottom: 100px;
+    position: relative;
   }
+  #team-carousel {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#team-carousel li {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  right: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+#team-carousel li.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 }
 @media (max-width: 764px) {
   .carausel-team {
     height: 700px;
     overflow: hidden;
     margin-bottom: 100px;
+    position: relative;
   }
 }
 

@@ -342,6 +342,7 @@
 .tab-content>.tab-pane {
   display: none;
   position: absolute;
+  width: 90%;
 }
 .howwecan-right .tab-content .tab-pane h3 {
   margin: 0 0 30px;
@@ -3462,7 +3463,8 @@
     margin-bottom: 10px;
   }
   .howwecan-right .tab-content {
-    margin-right: 0;
+    margin-left: 0;
+    float: left;
   }
   .howwecan-left .img-box {
     max-width: 130px;
@@ -4475,6 +4477,7 @@
   .howwecan-right .tab-content .tab-pane p {
     font-size: 14px;
     line-height: 26px;
+    
   }
 
   /* -- Schedule Section */

@@ -1494,6 +1494,12 @@ a {
   margin: 0;
   padding: 0;
 }
+}
+/* carousel timer */
+@media (max-width: 479px) {
+  #carousel-time {
+      height: auto;
+    }
 
 #team-carousel li {
   position: absolute;
@@ -3036,3 +3042,14 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
+/* hurryup */
+#hurryup{
+  display: flex;
+  width: 100vw;
+}
+@media (max-width: 479px) {
+  #hurryup {
+      display: grid;
+      width: 100vw;
+    }
+}

@@ -1089,7 +1089,7 @@
   margin-top: 70px;
   margin-bottom: 52px;
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 100%;
 }
 .testimonial-block::before {
@@ -1445,6 +1445,7 @@
 .latest-blog .type-post .entry-meta [class*="post-"] {
   float: left;
   margin-right: 13px;
+  margin-top: 15px;
   transition: all 1s ease 0s;
   -webkit-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;

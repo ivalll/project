@@ -116,6 +116,20 @@
   bottom: auto;
   z-index: 13;
 }
+@media only screen and (min-width: 1800px) {
+  .slider-content-box {
+  display: inline-block;
+  height: 750px;
+  padding: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgba(254, 202, 22, 0.88);
+  position: relative;
+  top: 0;
+  bottom: auto;
+  }
+}
 .slider-content-box::before {
   position: absolute;
   content: "";
@@ -1218,11 +1232,11 @@
 .hurryup-block {
   position: relative;
   background-color: rgba(227, 183, 25, 0.85);
-  padding: 80px 0 83px;
+  padding: 80px 0 73px;
   display: inline-block;
   width: 100%;
   text-align: center;
-  height: 430px;
+  height: auto;
 }
 .hurryup-block .timer-box h3 {
   margin: 0;
@@ -1275,7 +1289,12 @@
 .hurryup-block .left.carousel-control {
   left: auto;
   right: 0;
-  bottom: -37px;
+  bottom: -67px;
+}
+.hurryup-block .right.carousel-control {
+  left: auto;
+  right: 0;
+  bottom: -20px;
 }
 .hurryup-block .timer-box .clock {
   display: inline-block;
@@ -1314,10 +1333,11 @@
 .booking-form-block {
   position: relative;
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 40px 62px 63px;
+  padding: 40px 62px 83px;
   display: inline-block;
   width: 100%;
   text-align: center;
+  height: auto;
 }
 .booking-form-block h3 {
   color: #fff;

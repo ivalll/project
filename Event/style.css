@@ -119,7 +119,7 @@ a {
 
 /* - Section Padding */
 .section-padding {
-  padding-top: 160px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -3070,4 +3070,8 @@ you can use the generic selector below, but it's slower:
     margin-bottom: 30px;
   }
 
+}
+#set-up{
+  padding-left: 0px;
+  padding-right: 0px;
 }

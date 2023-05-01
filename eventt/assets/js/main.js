@@ -1,26 +1,26 @@
-(function($){
+(function ($) {
   "use strict";
-  
+
   /* sticky header - start*/
-  
-  $(window).on('scroll', function () {
+
+  $(window).on("scroll", function () {
     if ($(this).scrollTop() > 120) {
-      $('.header-nav').addClass("sticky")
+      $(".header-nav").addClass("sticky");
     } else {
-      $('.header-nav').removeClass("sticky")
+      $(".header-nav").removeClass("sticky");
     }
   });
   /* sticky header - end */
-  
+
   /* bg parallax - start */
-  
-  $('[data-parallax]').parallax({
-    speed: .6,
+
+  $("[data-parallax]").parallax({
+    speed: 0.6,
   });
   /* bg parallax - end */
-  
+
   /* hero sec start sec end */
-  $('.hero-slider-wrap').slick({
+  $(".hero-slider-wrap").slick({
     dots: false,
     speed: 1000,
     arrows: false,
@@ -29,14 +29,13 @@
     slidesToShow: 1,
     pauseOnHover: true,
     autoplaySpeed: 6000,
-   
   });
-  
+
   /* hero sec start sec end */
-  
+
   /* review sec start start */
-  
-  $('.review-card-items-wrap').slick({
+
+  $(".review-card-items-wrap").slick({
     dots: true,
     infinite: true,
     autoplay: true,
@@ -50,79 +49,76 @@
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-        }
+        },
       },
       {
         breakpoint: 991.98,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 767.98,
         settings: {
           slidesToShow: 1,
-        }
-      }
-      
-    ]
+        },
+      },
+    ],
   });
   /* review sec start sec end */
-  
+
   /* counter */
-  $('.counter-box[data-countdown]').each(function() {
-    var $this = $(this), finalDate = $(this).data('countdown');
-    $this.countdown(finalDate, function(event) {
-      var $this = $(this).html(event.strftime(''
-      + '<li class="days"><strong class="day2">%D</strong><span class="d-block">Days</span></li>'
-      + '<li class="hours"><strong class="hours2">%H</strong><span class="d-block">Hours</span></li>'
-      + '<li class="minutes"><strong class="min2">%M</strong><span class="d-block">Minutes</span></li>'
-      + '<li class="seconds"><strong class="sec2">%S</strong><span class="d-block">Seconds</span></li>'));
+  $(".counter-box[data-countdown]").each(function () {
+    var $this = $(this),
+      finalDate = $(this).data("countdown");
+    $this.countdown(finalDate, function (event) {
+      var $this = $(this).html(
+        event.strftime(
+          "" +
+            '<li class="days"><strong class="day2">%D</strong><span class="d-block">Days</span></li>' +
+            '<li class="hours"><strong class="hours2">%H</strong><span class="d-block">Hours</span></li>' +
+            '<li class="minutes"><strong class="min2">%M</strong><span class="d-block">Minutes</span></li>' +
+            '<li class="seconds"><strong class="sec2">%S</strong><span class="d-block">Seconds</span></li>'
+        )
+      );
     });
   });
   /* counter */
- 
-      
-  $(document).on( 'click', '.mode', function(e){
+
+  $(document).on("click", ".mode", function (e) {
     e.preventDefault;
-    if($('body').hasClass('dark-version')) {
-        $('body').removeClass('dark-version');
-        $('.mode .fa-moon').show();
-        $('.mode .fa-sun').hide();
+    if ($("body").hasClass("dark-version")) {
+      $("body").removeClass("dark-version");
+      $(".mode .fa-moon").show();
+      $(".mode .fa-sun").hide();
     } else {
-        $('body').addClass('dark-version');
-        $('.mode .fa-moon').hide();
-        $('.mode .fa-sun').show();
+      $("body").addClass("dark-version");
+      $(".mode .fa-moon").hide();
+      $(".mode .fa-sun").show();
     }
-  }); 
-
-
-
-  AOS.init({
-
   });
 
-  $(document) .ready(function(){
-    $('.zoom-gallery').magnificPopup({
-        delegate: '.item-thumb',
-        type: 'image',
-        closeOnContentClick: false,
-        closeBtnInside: false,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        gallery: {
-            enabled: true
+  AOS.init({});
+
+  $(document).ready(function () {
+    $(".zoom-gallery").magnificPopup({
+      delegate: ".item-thumb",
+      type: "image",
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: "mfp-with-zoom mfp-img-mobile",
+      gallery: {
+        enabled: true,
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function (element) {
+          return element.find("img");
         },
-        zoom: {
-            enabled: true,
-            duration: 300,
-            opener: function(element) {
-                return element.find('img');
-            }
-        }
+      },
     });
   });
-
-    
 })(jQuery);
 
 /**

@@ -12,6 +12,11 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+   <!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
    <!-- animation -->
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -71,34 +76,7 @@
 </head>
 
 <body>
-   <!-- This code is use for color chooser, you can delete -->
-   <div id="switch-color" class="color-switcher">
-      <div class="open"><i class="fas fa-cog"></i></div>
-      <h4>COLOR OPTION</h4>
-      <ul>
-         <li><a class="color-1" onclick="setActiveStyleSheet('main'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-6" onclick="setActiveStyleSheet('color-6'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-7" onclick="setActiveStyleSheet('color-7'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-8" onclick="setActiveStyleSheet('color-8'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-      </ul>
-   </div>
-   <!-- end color switch -->
-
-
-   <div class="body-wrap">
-      <!-- header area start -->
+   <!-- header area start -->
 
       <!-- top bar -->
       
@@ -327,7 +305,136 @@
             </div>
          </header>
       <!-- End Header -->
+      <!-- sidebar-mobile -->
+      <div class="offcanvas offcanvas-start d-block d-sm-none" id="sidebar-mobile" data-bs-scroll="true">
+		<div class="offcanvas-header">
+			&nbsp;<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<div class="nav-menu">
+				<ul>
+					<li>
+						<a href="https://dialogika.co/" class="nav-link scrollto ">
+							<i class="fa fa-home" style="margin-left: 10px;"></i>
+							<span>Home</span>
+						</a>
+					</li>
+					<li><a href="#online-collapse" data-bs-toggle="collapse" class="nav-link ">
+							<i class="fa-solid fa-house-signal" style="margin-left: 10px;"></i>
+							<span>Online</span>
+						</a>
+					</li>
+					<div class="collapse" id="online-collapse" data-bs-parent="">
+						<li>
+							<a href="../program/basic-plus.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
+								<span>Basic Plus</span>
+							</a>
+						</li>
+						<li>
+							<a href="../subscribe/action-play.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
+								<span>Action Play</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="#offline-collapse" data-bs-toggle="collapse" class="nav-link ">
+							<i class="fa-solid fa-hand-wave" style="margin-left: 10px;"></i>
+							<span>Offline</span>
+						</a>
+					</li>
+					<div class="collapse" id="offline-collapse" data-bs-parent="">
+						<li>
+							<a href="../program/first-class.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
+								<span>First Class</span>
+							</a>
+						</li>
+						<li>
+							<a href="../program/royal-class-jakarta.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
+								<span>Royal Class</span>
+							</a>
+						</li>
+						<li>
+							<a href="../subscribe/jogja-play.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
+								<span>Jogja Play</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="#kids-collapse" data-bs-toggle="collapse" class="nav-link ">
+							<i class="fa-solid fa-family-pants" style="margin-left: 10px;"></i>
+							<span>Kids</span>
+						</a>
+					</li>
+					<div class="collapse" id="kids-collapse" data-bs-parent="">
+						<li>
+							<a href="../program/kids-class.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
+								<span>Kids Class</span>
+							</a>
+						</li>
+						<li>
+							<a href="../subscribe/kids-play.html" style="background-color: #f2f3f5;">
+								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
+								<span>Kids Play</span>
+							</a>
+						</li>
+					</div>
+					<li>
+						<a href="../corporate/" class="nav-link">
+							<i class="fa-solid fa-building" style="margin-left: 10px;"></i>
+							<span>Corporate</span>
+						</a>
+					</li>
+					<li>
+						<a href="../event/" class="nav-link">
+							<i class="fa-solid fa-calendar-star" style="margin-left: 10px;"></i>
+							<span>Event</span>
+						</a>
+					</li>
+					<li>
+						<a href="../blog/" class="nav-link">
+							<i class="fa-brands fa-blogger-b" style="margin-left: 10px;"></i>
+							<span>Blog</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+      <!-- end sidebar -->
+   <!-- This code is use for color chooser, you can delete -->
+   <div id="switch-color" class="color-switcher">
+      <div class="open"><i class="fas fa-cog"></i></div>
+      <h4>COLOR OPTION</h4>
+      <ul>
+         <li><a class="color-1" onclick="setActiveStyleSheet('main'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-6" onclick="setActiveStyleSheet('color-6'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-7" onclick="setActiveStyleSheet('color-7'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+         <li><a class="color-8" onclick="setActiveStyleSheet('color-8'); return false;" href="#"><i
+                  class="fas fa-cog"></i></a> </li>
+      </ul>
+   </div>
+   <!-- end color switch -->
 
+
+   <div class="body-wrap">
+      
       <!-- hero sec start -->
          <section class="hero-sec" style="background-image: url(assets/images/banner/group.png);">
             <div class="hero-slider-wrap">
@@ -2834,6 +2941,7 @@
 
    <!-- javaScript -->
    <script src="assets/js/main.js"></script>
+   
 
    <!-- color switch -->
    <script src="color-switch/switch.js"></script>
